@@ -5,22 +5,26 @@
   "scripts": {
     "test": "cypress run",
     "open": "cypress open",
-    "bdd": "cypress run --env TAGS='not @ignore'",
-    "bdd:open": "cypress open --env TAGS='not @ignore'",
-    "clear:reports": "rimraf cypress/reports",
-    "test:headless": "cypress run --browser chrome --headless",
     "test:alltest": "cypress run --spec 'cypress/e2e/features/**/*.feature'",
     "test:home": "cypress run --spec 'cypress/e2e/features/**/homePage.feature'",
     "test:profile": "cypress run --spec 'cypress/e2e/features/**/profilePage.feature'",
     "test:cart": "cypress run --spec 'cypress/e2e/features/**/cartPage.feature'"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
     "cypress": "^14.5.1",
+    "cypress-esbuild-preprocessor": "^1.0.2",
     "cypress-xpath": "^2.0.1",
-    "esbuild": "^0.25.6"
+    "esbuild": "^0.25.6",
+    "multiple-cucumber-html-reporter": "^3.9.3"
+  },
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1"
   }
 }

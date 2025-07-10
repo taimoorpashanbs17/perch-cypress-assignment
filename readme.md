@@ -27,6 +27,36 @@ This project is a **Test Automation Framework** built using [Cypress](https://ww
     - Add one product and verify that product is displaying on "cart"
     - Add one product, remove it and verify that product is removed from cart
 
+## Project Structure
+
+```bash
+perch-cypress-assignment/
+│
+├── cypress/
+│   ├── e2e/
+│   │   └── features/
+│   │       ├── cartPage.feature
+│   │       └── homePage.feature
+│   │       ├── profilePagefeature  
+│   ├── pages/
+│   │   └── HomePage.js
+│   │   └── ProductDetailsPage.js
+│   │   └── ProfilePage.js
+│   ├── step_definations/
+│   │   └── cartSteps.js
+│   │   └── profileSteps.js
+│   ├── support/
+│   │   ├── commands.js
+│   │   └── e2e.js
+│
+├── .gitignore
+├── cypress.config.js
+├── package.json
+├── cucumber.config.js
+├── cypress-cucumber-preprocessor.config.js
+└── README.md
+```
+
 
 ## 🛠 Installation
 

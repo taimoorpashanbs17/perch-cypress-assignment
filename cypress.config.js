@@ -7,7 +7,6 @@ module.exports = defineConfig({
   e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",
     baseUrl: "http://localhost:3000",
-
     async setupNodeEvents(on, config) {
       const bundler = createBundler({
         plugins: [createEsbuildPlugin(config)],
@@ -16,7 +15,7 @@ module.exports = defineConfig({
       on("file:preprocessor", bundler);
 
       await addCucumberPreprocessorPlugin(on, config, {
-        messagesOutputPath: "cypress/cucumber-json/[name].ndjson"
+        messagesOutputPath: "cypress/cucumber-json/[name].ndjson",
       });
 
       return config;

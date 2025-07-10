@@ -1,5 +1,3 @@
-import '@shelex/cypress-allure-plugin';
-
 Cypress.Commands.add('clickElement', (locator) => {
   cy.get(locator).click();
 });
