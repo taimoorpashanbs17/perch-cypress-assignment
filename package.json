@@ -4,36 +4,23 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "posttest": "node generate-report.js",
     "open": "cypress open",
     "bdd": "cypress run --env TAGS='not @ignore'",
     "bdd:open": "cypress open --env TAGS='not @ignore'",
     "clear:reports": "rimraf cypress/reports",
     "test:headless": "cypress run --browser chrome --headless",
-    "test:feature": "cypress run --spec 'cypress/e2e/features/**/*.feature'",
-    "test:cart": "cypress run --spec 'cypress/e2e/features/cartPage.feature'",
-    "test:allure": "cypress run && npm run generate:report && npm run open:report",
-    "generate:report": "allure generate allure-results --clean -o allure-report",
-    "open:report": "allure open allure-report",
-    "merge:mochawesome": "mochawesome-merge mochawesome-report/*.json > mochawesome-report/merged-report.json",
-    "generate:mochawesome": "marge mochawesome-report/merged-report.json --reportDir mochawesome-report --reportFilename index.html"
+    "test:alltest": "cypress run --spec 'cypress/e2e/features/**/*.feature'",
+    "test:home": "cypress run --spec 'cypress/e2e/features/**/homePage.feature'",
+    "test:profile": "cypress run --spec 'cypress/e2e/features/**/profilePage.feature'",
+    "test:cart": "cypress run --spec 'cypress/e2e/features/**/cartPage.feature'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
-    "@shelex/cypress-allure-plugin": "^2.41.2",
-    "allure-commandline": "^2.34.1",
     "cypress": "^14.5.1",
     "cypress-xpath": "^2.0.1",
-    "esbuild": "^0.25.6",
-    "mocha-allure-reporter": "^1.4.0",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.2.0",
-    "multiple-cucumber-html-reporter": "^3.9.3"
+    "esbuild": "^0.25.6"
   }
 }
