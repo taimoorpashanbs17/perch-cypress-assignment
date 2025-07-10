@@ -4,5 +4,7 @@ package-lock.json
 cypress/screenshots
 cypress/reports
 
+reports/
+
 
 .vscode/
