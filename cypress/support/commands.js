@@ -29,6 +29,11 @@ Cypress.Commands.add('getElementCount', (locator) => {
   });
 });
 
+Cypress.Commands.add('verifyElementCount', (locator, expectedCount) => {
+  cy.get(locator).should('have.length', expectedCount);
+});
+
+
 Cypress.Commands.add('verifyUrlContains', (expectedValue) => {
   cy.url().should('include', expectedValue);
 });

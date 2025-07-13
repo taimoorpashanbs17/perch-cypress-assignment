@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import {When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import CartPage from "../pages/CartPage";
 
 const cartPage = new CartPage();
@@ -41,17 +41,6 @@ Then ('Message "Your cart is empty" should be displaying', () =>{
     cartPage.verifyEmptyCartDisplaying();
 });
 
-
-//Message "Your cart is empty" should be displaying
-
-
-
-//Verify the correct subtotal is calculated
-
-
-
-
-
-
-
-
+When ('Click on "Proceed to CheckOut" Button', () =>{
+    cartPage.clickOnProceedToCheckOutButton();
+});

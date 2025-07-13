@@ -6,6 +6,7 @@ class CartPage {
     subTotal = '[data-testid="subtotal"]'
     removeButton = '.remove-item'
     cartEmptyText = '[data-testid="empty-cart"] > p'
+    proceedToCheckOutButton = '[data-testid="proceed-to-checkout"]'
 
     verifyCurrentURLContainsCart() {
         cy.verifyUrlContains("/cart")
@@ -52,6 +53,10 @@ class CartPage {
 
     verifyEmptyCartDisplaying(){
         cy.shouldDisplayTextIn(this.cartEmptyText, "Your cart is empty");
+    }
+
+    clickOnProceedToCheckOutButton(){
+        cy.clickElement(this.proceedToCheckOutButton)
     }
 
 }
