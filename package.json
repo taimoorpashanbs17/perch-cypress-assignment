@@ -10,7 +10,6 @@
     "test:profile": "cypress run --spec 'cypress/e2e/features/**/profilePage.feature'",
     "test:cart": "cypress run --spec 'cypress/e2e/features/**/cartPage.feature'"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "@cucumber/pretty-formatter": "^1.0.1",
     "cypress": "^14.5.1",
     "cypress-esbuild-preprocessor": "^1.0.2",
     "cypress-xpath": "^2.0.1",

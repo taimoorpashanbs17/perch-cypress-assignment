@@ -54,3 +54,15 @@ Then('New updated email should be displaying on "Email" field', () => {
   profilePage.verifyEmailTextUpdated(email);
 });
 
+Then('Check that Number of Order should be 1', () => {
+  profilePage.verifyNumberOfOrders(1);
+});
+
+Then('Verify Order Number is exactly same as generated', () => {
+  const orderNumber = Cypress.env('orderNumber').replace('#', '');;
+  profilePage.verifyOrderNumber(orderNumber);
+});
+
+
+
+//Verify Order Number is exactly same as generated

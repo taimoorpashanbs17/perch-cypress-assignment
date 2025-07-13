@@ -8,6 +8,8 @@ class ProfilePage{
     saveChangesButton = '[data-testid="save-profile"]'
     nameText = '[data-testid="profile-name"]'
     emailText = '[data-testid="profile-email"]'
+    orderitems = '.order-items';
+    orderNumber = '.order-number > .value';
 
     verifyCurrentURLContainsProfile(){
         cy.verifyUrlContains("profile")
@@ -58,6 +60,16 @@ class ProfilePage{
         verifyEmailTextUpdated(email){
         cy.getElementText(this.emailText).then((text) => {
             expect(text).to.be.equal(email)
+        })
+    }
+
+    verifyNumberOfOrders(numberOfOrders){
+        cy.verifyElementCount(this.orderitems, numberOfOrders);
+    }
+
+    verifyOrderNumber(expectedOrderNumber){
+        cy.getElementText(this.orderNumber).then((text) => {
+            expect(text).to.be.equal(expectedOrderNumber)
         })
     }
 

@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import {When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 
 
@@ -33,5 +33,4 @@ When ('User selects a quantity from the "Quantity" dropdown', () =>{
 When ('Click on the "Add to Cart" button', () =>{
     productDetailsPage.clickOnAddToCartButton();
 });
-
 
